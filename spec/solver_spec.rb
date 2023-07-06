@@ -22,4 +22,17 @@ RSpec.describe Solver do
       expect(solver.reverse('world')).to eq('dlrow')
     end
   end
+
+  # When N is divisible by 3, return "fizz".
+  # When N is divisible by 5, return "buzz".
+  # When N is divisible by 3 and 5, return "fizzbuzz".
+  # Any other case, return N as a string (e.g. say N is 7 then return "7").
+
+  context "When a number is divisible by 3" do
+    it "returns \'fizz\'" do
+      solver = Solver.new
+      expect(solver.fizzbuzz(219)).to eq('fizz')
+    end
+  end 
+
 end
