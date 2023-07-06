@@ -23,24 +23,27 @@ RSpec.describe Solver do
     end
   end
 
-  # When N is divisible by 5, return "buzz".
-  # When N is divisible by 3 and 5, return "fizzbuzz".
   # Any other case, return N as a string (e.g. say N is 7 then return "7").
 
-  context "When a number is divisible by" do
-    it "3 returns \'fizz\'" do
+  context "When a number is" do
+    it "divisible by 3 returns \'fizz\'" do
       solver = Solver.new
       expect(solver.fizzbuzz(219)).to eq('fizz')
     end
 
-    it "5 returns \'buzz\'" do
+    it "divisible by 5 returns \'buzz\'" do
       solver = Solver.new
       expect(solver.fizzbuzz(250)).to eq('buzz')
     end
 
-    it "3 and 5 returns \'fizzbuzz\'" do
+    it "divisible by 3 and divisible by 5 at the same time, then returns \'fizzbuzz\'" do
       solver = Solver.new
       expect(solver.fizzbuzz(255)).to eq('fizzbuzz')
+    end
+
+    it "not divisible by 3 neither is divisible by 5, then returns the number" do
+      solver = Solver.new
+      expect(solver.fizzbuzz(341)).to eq(341)
     end
   end 
 
