@@ -37,6 +37,11 @@ RSpec.describe Solver do
       solver = Solver.new
       expect(solver.fizzbuzz(250)).to eq('buzz')
     end
+
+    it "3 and 5 returns \'fizzbuzz\'" do
+      solver = Solver.new
+      expect(solver.fizzbuzz(255)).to eq('fizzbuzz')
+    end
   end 
 
   # context "When a number is divisible by 5" do
