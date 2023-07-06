@@ -12,7 +12,6 @@ class Solver
   end
 
   def fizzbuzz(num)
-    num % 3 == 0 ? 'fizz' : num
-    # num % 5 == 0 ? 'buzz' : num
+    num % 3 == 0 ? "fizz" : num % 5 == 0 ? 'buzz' : num
   end
 end
